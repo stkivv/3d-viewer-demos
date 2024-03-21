@@ -5,7 +5,10 @@
  * @format
  */
 
- module.exports = {
+module.exports = {
+  resolver: {
+    assetExts: ['obj', 'mtl', 'png'] 
+  },
   transformer: {
     getTransformOptions: async () => ({
       transform: {

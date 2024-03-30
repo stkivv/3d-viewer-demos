@@ -21,7 +21,7 @@ const EngineScreen: FunctionComponent<ViewProps> = (props: ViewProps) => {
     const loadScene = async () => {
       if (engine) {
         const url =
-          "https://raw.githubusercontent.com/stkivv/3d-viewer-demos/main/SceneViewerDemo/app/src/main/assets/models/skull.obj";
+          "https://raw.githubusercontent.com/stkivv/3d-viewer-demos/main/SceneViewerDemo/app/src/main/assets/models/skull-highpoly.glb";
         await SceneLoader.LoadAsync(url, undefined, engine).then(
           (loadScene) => {
             loadScene.createDefaultCameraOrLight(true, undefined, true);
@@ -29,7 +29,7 @@ const EngineScreen: FunctionComponent<ViewProps> = (props: ViewProps) => {
             (loadScene.activeCamera as ArcRotateCamera).radius = 100;
             loadScene.meshes.forEach((mesh) => {
               mesh.rotationQuaternion = null;
-              mesh.rotate(new Vector3(1, 0, 0), -Math.PI / 2, Space.WORLD);
+              mesh.rotate(new Vector3(0, 0, 0), Math.PI / 2, Space.WORLD);
             });
             setScene(loadScene);
             setCamera(loadScene.activeCamera!);

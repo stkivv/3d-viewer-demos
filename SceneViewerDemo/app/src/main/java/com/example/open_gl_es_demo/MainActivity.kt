@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                     val model = rememberNode {
                         ModelNode(
                             modelInstance = modelLoader.createModelInstance(
-                                assetFileLocation = "models/skull.glb",
+                                assetFileLocation = "models/skull-highpoly.glb",
                             ),
                             scaleToUnits = 1.0f,
                             centerOrigin = Position(0f, 0f , 0f),
